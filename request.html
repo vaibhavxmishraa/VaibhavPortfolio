@@ -1,1 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
 
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Project Request Terminal</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap"
+          rel="stylesheet">
+
+</head>
+
+<body class="dashboard-body">
+
+<div class="topbar">
+
+    <div class="logo">
+        PROJECT://REQUEST
+    </div>
+
+    <nav>
+
+        <a href="dashboard.html">HOME</a>
+
+        <a href="projects.html">VAULT</a>
+
+        <a href="hire.html">HIRE</a>
+
+        <a href="assistant.html">AI</a>
+
+        <a href="contact.html">CONTACT</a>
+
+    </nav>
+
+</div>
+
+<section class="hire-header">
+
+    <h1>
+        PROJECT REQUEST TERMINAL
+    </h1>
+
+    <p>
+        Submit your mission requirements.
+    </p>
+
+</section>
+
+<form id="requestForm"
+      class="hire-form">
+
+    <input type="text"
+           placeholder="Client Name"
+           required>
+
+    <input type="email"
+           placeholder="Email Address"
+           required>
+
+    <input type="text"
+           placeholder="Project Title"
+           required>
+
+    <select required>
+
+        <option value="">
+            Select Category
+        </option>
+
+        <option>
+            Website
+        </option>
+
+        <option>
+            AI Project
+        </option>
+
+        <option>
+            Portfolio
+        </option>
+
+        <option>
+            Python Project
+        </option>
+
+        <option>
+            College Project
+        </option>
+
+    </select>
+
+    <input type="text"
+           placeholder="Budget">
+
+    <input type="text"
+           placeholder="Expected Deadline">
+
+    <textarea rows="7"
+              placeholder="Project Description"
+              required></textarea>
+
+    <button class="send-btn"
+            type="submit">
+
+        SUBMIT REQUEST
+
+    </button>
+
+</form>
+
+<div id="requestSuccess"
+     class="success-box">
+
+    <h2>
+        REQUEST ACCEPTED
+    </h2>
+
+    <p>
+        Your mission has been delivered.
+    </p>
+
+</div>
+
+<section class="services">
+
+    <div class="service-card">
+
+        <h2>FAST DELIVERY</h2>
+
+        <p>
+            Timely completion of projects.
+        </p>
+
+    </div>
+
+    <div class="service-card">
+
+        <h2>PREMIUM DESIGN</h2>
+
+        <p>
+            Modern and attractive interfaces.
+        </p>
+
+    </div>
+
+    <div class="service-card">
+
+        <h2>24×7 SUPPORT</h2>
+
+        <p>
+            Assistance throughout the project.
+        </p>
+
+    </div>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
