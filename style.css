@@ -1,0 +1,537 @@
+body{
+    margin:0;
+    background:black;
+    color:#00ff88;
+    font-family:'Share Tech Mono', monospace;
+    overflow:hidden;
+}
+
+#matrix{
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    z-index:-1;
+}
+
+.terminal{
+    width:80%;
+    max-width:900px;
+    margin:auto;
+    padding-top:100px;
+}
+
+.line{
+    font-size:20px;
+    margin:15px 0;
+    animation:fade 1s forwards;
+}
+
+.glow{
+    color:#00ff88;
+    text-shadow:0 0 15px #00ff88;
+}
+
+.access-box{
+    margin-top:80px;
+    border:1px solid #00ff88;
+    padding:40px;
+    text-align:center;
+    background:rgba(0,255,136,0.05);
+    backdrop-filter:blur(10px);
+}
+
+.access-box h1{
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+.enter-btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:15px 40px;
+    border:1px solid #00ff88;
+    color:#00ff88;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.enter-btn:hover{
+    background:#00ff88;
+    color:black;
+    box-shadow:0 0 20px #00ff88;
+}
+
+.scanline{
+    position:fixed;
+    width:100%;
+    height:2px;
+    background:rgba(0,255,136,0.3);
+    animation:scan 4s linear infinite;
+}
+
+@keyframes scan{
+    0%{top:0;}
+    100%{top:100%;}
+}
+
+@keyframes fade{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+.dashboard-body{
+    background:black;
+    color:#00ff88;
+    font-family:'Share Tech Mono', monospace;
+}
+
+.topbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    border-bottom:1px solid #00ff88;
+}
+
+.logo{
+    font-size:24px;
+}
+
+nav a{
+    color:#00ff88;
+    text-decoration:none;
+    margin-left:20px;
+}
+
+.agent-panel{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:60px;
+    padding:100px 10%;
+}
+
+.agent-image img{
+    width:280px;
+    border:2px solid #00ff88;
+    box-shadow:0 0 30px #00ff88;
+}
+
+.agent-info h1{
+    font-size:50px;
+}
+
+.status{
+    margin-top:20px;
+    color:#00ff88;
+}
+
+.system-panels{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+    padding:50px 10%;
+}
+
+.panel{
+    border:1px solid #00ff88;
+    padding:30px;
+    background:rgba(0,255,136,.05);
+}
+
+.terminal-box{
+    margin:50px 10%;
+    border:1px solid #00ff88;
+    padding:30px;
+}
+.hire-header{
+    text-align:center;
+    padding:60px 10%;
+}
+
+.hire-header h1{
+    color:#00ff88;
+    font-size:50px;
+    text-shadow:0 0 20px #00ff88;
+}
+
+.hire-form{
+    max-width:700px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    padding:30px;
+}
+
+.hire-form input,
+.hire-form textarea,
+.hire-form select{
+
+    padding:16px;
+
+    background:black;
+
+    color:#00ff88;
+
+    border:1px solid #00ff88;
+
+    font-family:'Share Tech Mono',monospace;
+
+    outline:none;
+}
+
+.send-btn{
+
+    padding:16px;
+
+    background:black;
+
+    color:#00ff88;
+
+    border:1px solid #00ff88;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.send-btn:hover{
+
+    background:#00ff88;
+
+    color:black;
+
+    box-shadow:0 0 20px #00ff88;
+}
+
+.success-box{
+
+    display:none;
+
+    text-align:center;
+
+    margin:40px;
+
+    border:1px solid #00ff88;
+
+    padding:30px;
+
+    color:#00ff88;
+}
+
+.services{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:30px;
+
+    padding:60px 10%;
+}
+
+.service-card{
+
+    border:1px solid #00ff88;
+
+    padding:30px;
+
+    background:
+    rgba(0,255,136,.05);
+
+    transition:.3s;
+}
+
+.service-card:hover{
+
+    box-shadow:
+    0 0 20px #00ff88;
+}
+.assistant-header{
+    text-align:center;
+    padding:50px;
+}
+
+.assistant-header h1{
+    color:#00ff88;
+    font-size:50px;
+    text-shadow:0 0 20px #00ff88;
+}
+
+.assistant-box{
+
+    width:80%;
+
+    max-width:900px;
+
+    margin:auto;
+
+    border:1px solid #00ff88;
+
+    padding:30px;
+
+    background:
+    rgba(0,255,136,0.04);
+
+    min-height:500px;
+}
+
+#chatArea{
+
+    height:350px;
+
+    overflow-y:auto;
+
+    margin-bottom:30px;
+}
+
+.bot-message,
+.user-message{
+
+    margin:15px 0;
+
+    padding:10px;
+
+    border-left:3px solid #00ff88;
+}
+
+.assistant-input{
+
+    display:flex;
+
+    gap:10px;
+}
+
+.assistant-input input{
+
+    flex:1;
+
+    padding:15px;
+
+    background:black;
+
+    color:#00ff88;
+
+    border:1px solid #00ff88;
+}
+
+.assistant-input button{
+
+    width:150px;
+
+    background:black;
+
+    color:#00ff88;
+
+    border:1px solid #00ff88;
+
+    cursor:pointer;
+}
+
+.assistant-input button:hover{
+
+    background:#00ff88;
+
+    color:black;
+}
+
+.commands{
+
+    padding:70px 10%;
+}
+.vault-header{
+    text-align:center;
+    padding:60px;
+}
+
+.vault-header h1{
+    font-size:50px;
+    color:#00ff88;
+    text-shadow:0 0 20px #00ff88;
+}
+
+.vault-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:30px;
+
+    padding:50px 10%;
+}
+
+.vault-card{
+
+    padding:40px;
+
+    border:1px solid #00ff88;
+
+    background:
+    rgba(0,255,136,0.05);
+
+    text-align:center;
+
+    cursor:pointer;
+
+    transition:.4s;
+
+    font-size:22px;
+}
+
+.vault-card:hover{
+
+    box-shadow:
+    0 0 25px #00ff88;
+
+    transform:
+    translateY(-10px);
+}
+
+.project-modal{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:
+    rgba(0,0,0,0.85);
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:999;
+}
+
+.modal-content{
+
+    width:500px;
+
+    padding:40px;
+
+    border:1px solid #00ff88;
+
+    background:black;
+
+    text-align:center;
+}
+
+.modal-content h2{
+
+    color:#00ff88;
+
+    margin-bottom:20px;
+}
+
+.modal-content button{
+
+    margin-top:20px;
+
+    padding:12px 30px;
+
+    background:black;
+
+    color:#00ff88;
+
+    border:1px solid #00ff88;
+
+    cursor:pointer;
+}
+
+.modal-content button:hover{
+
+    background:#00ff88;
+
+    color:black;
+}
+.contact-header{
+
+    text-align:center;
+
+    padding:60px;
+}
+
+.contact-header h1{
+
+    color:#00ff88;
+
+    font-size:50px;
+
+    text-shadow:0 0 20px #00ff88;
+}
+
+.terminal-form{
+
+    width:80%;
+
+    max-width:700px;
+
+    margin:auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+}
+
+.terminal-form input,
+.terminal-form textarea{
+
+    background:black;
+
+    color:#00ff88;
+
+    border:1px solid #00ff88;
+
+    padding:16px;
+
+    font-family:
+    'Share Tech Mono',
+    monospace;
+
+    outline:none;
+}
+
+.terminal-form button{
+
+    padding:16px;
+
+    background:black;
+
+    color:#00ff88;
+
+    border:1px solid #00ff88;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.terminal-form button:hover{
+
+    background:#00ff88;
+
+    color:black;
+
+    box-shadow:
+    0 0 20px #00ff88;
+}
