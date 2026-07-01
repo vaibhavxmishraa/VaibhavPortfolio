@@ -1,1 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
 
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Project Vault</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap"
+          rel="stylesheet">
+
+</head>
+
+<body class="dashboard-body">
+
+<div class="topbar">
+
+    <div class="logo">
+        PROJECT://VAULT
+    </div>
+
+    <nav>
+
+        <a href="dashboard.html">HOME</a>
+
+        <a href="hire.html">HIRE</a>
+
+        <a href="request.html">REQUEST</a>
+
+        <a href="assistant.html">AI</a>
+
+        <a href="contact.html">CONTACT</a>
+
+    </nav>
+
+</div>
+
+<section class="vault-header">
+
+    <h1>
+        CLASSIFIED PROJECT VAULT
+    </h1>
+
+    <p>
+        Access Restricted Files
+    </p>
+
+</section>
+
+<div class="vault-grid">
+
+    <div class="vault-card"
+         onclick="openProject(
+         'CAFÉ MANAGEMENT SYSTEM',
+         'Python based smart billing and management system.'
+         )">
+
+        FILE_001.EXE
+
+    </div>
+
+    <div class="vault-card"
+         onclick="openProject(
+         'EMAIL VALIDATOR',
+         'Python email validation project.'
+         )">
+
+        FILE_002.PY
+
+    </div>
+
+    <div class="vault-card"
+         onclick="openProject(
+         'MULTIMEDIA WEBSITE',
+         'Responsive multimedia website.'
+         )">
+
+        FILE_003.HTML
+
+    </div>
+
+    <div class="vault-card"
+         onclick="openProject(
+         'AI ASSISTANT',
+         'AI powered assistant system.'
+         )">
+
+        FILE_004.AI
+
+    </div>
+
+</div>
+
+<div id="projectModal"
+     class="project-modal">
+
+    <div class="modal-content">
+
+        <h2 id="projectTitle"></h2>
+
+        <p id="projectDesc"></p>
+
+        <button onclick="closeProject()">
+            CLOSE FILE
+        </button>
+
+    </div>
+
+</div>
+
+<section class="terminal-box">
+
+<pre>
+> ACCESS LEVEL : GRANTED
+> FILE STATUS : SECURE
+> DATABASE : ONLINE
+> AGENT PROJECTS : ACTIVE
+</pre>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
