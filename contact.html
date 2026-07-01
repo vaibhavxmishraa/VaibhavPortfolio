@@ -1,1 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
 
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Communication Terminal</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap"
+          rel="stylesheet">
+
+</head>
+
+<body class="dashboard-body">
+
+<div class="topbar">
+
+    <div class="logo">
+        CONTACT://TERMINAL
+    </div>
+
+    <nav>
+
+        <a href="dashboard.html">HOME</a>
+
+        <a href="projects.html">VAULT</a>
+
+        <a href="hire.html">HIRE</a>
+
+        <a href="request.html">REQUEST</a>
+
+        <a href="assistant.html">AI</a>
+
+    </nav>
+
+</div>
+
+<section class="contact-header">
+
+    <h1>
+        COMMUNICATION TERMINAL
+    </h1>
+
+    <p>
+        Establish Secure Connection
+    </p>
+
+</section>
+
+<form id="contactForm"
+      class="terminal-form">
+
+    <input type="text"
+           name="name"
+           placeholder="ENTER NAME"
+           required>
+
+    <input type="email"
+           name="email"
+           placeholder="ENTER EMAIL"
+           required>
+
+    <input type="text"
+           name="subject"
+           placeholder="MISSION SUBJECT"
+           required>
+
+    <textarea rows="7"
+              name="message"
+              placeholder="TRANSMIT MESSAGE"
+              required></textarea>
+
+    <button type="submit">
+
+        TRANSMIT DATA
+
+    </button>
+
+</form>
+
+<div id="terminalSuccess"
+     class="success-box">
+
+    <h2>
+        TRANSMISSION COMPLETE
+    </h2>
+
+    <p>
+        Message delivered successfully.
+    </p>
+
+</div>
+
+<section class="terminal-box">
+
+<pre>
+> COMMUNICATION STATUS : ONLINE
+> SECURITY PROTOCOL : ACTIVE
+> ENCRYPTION LEVEL : HIGH
+> CONNECTION : STABLE
+</pre>
+
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
